@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AM健身风尚  -  Aesthetic Movement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- [START] Stylesheets -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flipclock.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/superslides.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- [START] javascript -->
+	<script type="text/javascript" src="js/plugins/jQuery.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-migrate.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plugins/flipclock/base.js"></script>
+    <script type="text/javascript" src="js/plugins/flipclock/flipclock.js"></script>
+    <script type="text/javascript" src="js/plugins/flipclock/dailycounter.js"></script>
+    <script type="text/javascript" src="js/convertHex.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.superslides.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body class="giantdesign">
+	<!-- [START] Background Slider -->
+    <div id="slides">
+        <ul class="slides-container">
+            <li>
+              <div class="slideoverlay"></div>
+
+                <img src="images/background_1.jpg" width="1920" height="927" alt="" />
+            </li>
+            <li>
+              <div class="slideoverlay"></div>
+
+                <img src="images/background_2.jpg" width="1920" height="927" alt="" />
+            </li>
+            <li>
+                <div class="slideoverlay"></div>
+
+                <img src="images/background_3.jpg" width="1920" height="927" alt="" />
+            </li>
+        </ul>
+    </div>
+    <!-- [END] Background Slider -->
+
+    <!-- [START] wrapper -->
+	<div class="wrapper">
+        <header class="container">
+            <div class="site-logo">
+                <img src="images/logo.png" alt="your logo name" />
+            </div>
+        </header>
+
+    	<!-- [START] Timer -->
+        <div class="clock"></div>
+
+		<script type="text/javascript">
+		var clock;
+		$(document).ready(function() {
+			var currentDate = new Date();
+			var futureDate  = new Date(2014,4,22,00,00,00); // (date in yyyy,m,d,hours,minute,seconds format) //
+			var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+			var clock = $('.clock').FlipClock(diff, {
+				clockFace: 'DailyCounter',
+				countdown: true
+			});
+		});
+        </script>
+        <!-- [END] Timer -->
+
+        <!-- [START] Quotes -->
+        <div id="quote_container">
+          <ul class="bxslider">
+              <li><h1 class="method"> 欢迎来到AM健身风尚官方网站！</h1><h2 class="method"> 网站正在进行升级维护。。。</h2></li>
+              <li><h1 class="method"> 谢谢您的耐心！</h1><h2 class="method"> 网站不久将会重新上线</h2></li>
+              <li><h1 class="method"> 如果您有任何问题</h1><h2 class="method"> 请联系我们的人人微博微信公众平台@AM健身风尚</h2></li>
+            </ul>
+            <div id="bx-pager"></div>
+            <div id="bx-next"></div>
+            <div id="bx-prev"></div>
+        </div>
+        <!-- [END] Quotes -->
+
+        <!-- [START] Contact Us	-->
+        <div id="contact-us">
+            <div class="header_social-section">
+                <h4 class="method">关注我们@AM健身风尚</h4>
+                <ul class="social" style="padding-left: 0">
+                    <li class="facebook"><a href="www.renren.com"></a></li>
+                    <li class="twitter"><a href="www.weibo.com"></a></li>
+                    <li class="instagram"><a href="www.wechat.com"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="form">
+            <form class="form-inline" action="amjianshen@gmail.com">
+              <input class="form-bar" type="text" onfocus="if(this.value=='网站上线通知我') this.value='';" onblur="if(this.value=='' || this.value==' ') this.value='网站上线通知我';" value="网站上线通知我"/>
+              <button type="submit" class="btn">提交您的邮箱</button>
+            </form>
+        </div>
+        <!-- [END] Contact Us -->
+
+		<!-- FOOTER -->
+        <footer id="main-footer">
+          <p id="quote-footer" class="method"> AM健身资讯-锻炼方法+饮食营养+健身补剂+生活方式=更好的自己<br /> AM健身商城-美国市场最优质的运动营养品，最潮的健身装备直邮国内</p>
+        <div class="divider"></div>
+          <p class="method"> &copy; Copyright 2014 <span><a href="#">AM健身风尚</a></span>. All right reserved.</p>
+        </footer>
+
+    </div>
+    <!-- [END] wrapper -->
+
+</body>
+</html>
